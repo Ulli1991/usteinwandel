@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ulrich P. Steinwandel</title>
+<meta name="description" content="Ulrich P. Steinwandel (Ulli), computational astrophysicist at the Max Planck Institute for Astrophysics. Simulations of multiphase galactic winds, galaxy clusters, magnetic fields, and new GPU-native and differentiable codes.">
+<meta property="og:title" content="Ulrich P. Steinwandel, computational astrophysicist">
+<meta property="og:description" content="Simulations of galactic winds, galaxy clusters and cosmic magnetism, from single supernovae to the Coma cluster.">
+<meta property="og:image" content="assets/img/wlm.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <a class="brand" href="#top">U. P. Steinwandel</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#papers">Papers</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('assets/img/lmc-wind.jpg')">
+    <video src="assets/video/lmc-wind.mp4" poster="assets/img/lmc-wind.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+  </div>
+  <div class="hero-inner">
+   <div class="hero-text">
+    <p class="eyebrow">Computational astrophysics</p>
+    <h1>Ulrich P. Steinwandel</h1>
+    <p class="lede">I build and run simulations that follow gas from single supernova explosions to entire galaxy clusters, to understand how stars, magnetic fields and turbulence shape the Universe we observe.</p>
+    <p class="affil">MPA Research Fellow · Max Planck Institute for Astrophysics, Garching</p>
+    <p class="flagships"><span>Flagship projects</span> <a href="#stella">Stella</a>, star-by-star stellar feedback · <a href="#luna">Luna</a>, differentiable GPU hydrodynamics</p>
+    <div class="links">
+      <a class="btn primary" href="#contact">Get in touch</a>
+      <a class="btn" href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Steinwandel%2C%20U%22&amp;sort=date%20desc" target="_blank" rel="noopener">Publications (ADS)</a>
+      <a class="btn" href="https://orcid.org/0000-0001-8867-5026" target="_blank" rel="noopener">ORCID</a>
+      <a class="btn" href="https://github.com/Ulli1991" target="_blank" rel="noopener">GitHub</a>
+    </div>
+   </div>
+   <figure class="portrait"><img src="assets/img/me.jpg" alt="Portrait of Ulrich P. Steinwandel"></figure>
+  </div>
+  <a class="scroll" href="#about" aria-label="Scroll down"><span></span></a>
+</section>
+
+<main>
+
+<section id="about" class="section about">
+  <div class="about-text">
+    <h2>About me</h2>
+    <p class="big">I'm Ulli, a theoretical and computational astrophysicist. I write simulation codes, run them on some of the largest supercomputers available, and use them to ask how galaxies regulate themselves.</p>
+    <p>Most of my work is about <strong>feedback and the multiphase gas it creates</strong>: how individual supernovae drive hot, warm and cold winds out of galaxies, how those winds carry mass, energy and metals, and how the same physics plays out in the plasma of galaxy clusters. Magnetic fields run through all of it, and much of my early work showed how turbulent dynamos grow them in galaxies and clusters.</p>
+    <p>I'm also a code developer, and my two flagship projects are codes. <strong>Stella</strong> is my star-by-star stellar feedback model in GIZMO: it samples individual stars, gives each one its own stellar evolution, and resolves every supernova at about one solar mass resolution. <strong>Luna</strong> is my own GPU-native, end-to-end differentiable hydrodynamics code, so that simulations can be fitted, inverted and optimised like any other model.</p>
+    <p>Before moving to the <a href="https://www.mpa-garching.mpg.de" target="_blank" rel="noopener">MPA</a> in 2025, I was a Flatiron Research Fellow at the <a href="https://www.simonsfoundation.org/flatiron/center-for-computational-astrophysics/" target="_blank" rel="noopener">Center for Computational Astrophysics</a> in New York. I did my PhD at LMU Munich and studied physics in Konstanz.</p>
+  </div>
+  <aside class="facts">
+    <div class="fact"><span class="num">60+</span><span class="label">papers, 13 as first author</span></div>
+    <div class="fact"><span class="num">1000+</span><span class="label">citations</span></div>
+    <div class="fact"><span class="num">~4&nbsp;M<sub>⊙</sub></span><span class="label">resolution of my dwarf galaxy simulations, star by star</span></div>
+    <div class="fact"><span class="num">9</span><span class="label">PhD students co-mentored</span></div>
+    <div class="fact"><span class="num">2027</span><span class="label">chair of the <a href="https://multiphaseoutflows.pages.mpcdf.de/" target="_blank" rel="noopener">Multiphase Outflows</a> workshop at Schloss Aspenstein</span></div>
+  </aside>
+</section>
+
+<section id="research" class="section">
+  <h2>Research</h2>
+  <p class="section-lede">Four threads, one theme: resolving the small-scale physics that decides what happens on large scales.</p>
+
+  <article class="topic" id="stella">
+    <figure><img src="assets/img/wlm.jpg" alt="Gas surface density of a simulated WLM-mass dwarf galaxy at one solar mass resolution, full of supernova-blown bubbles" loading="lazy"></figure>
+    <div>
+      <p class="kicker">Flagship · Stella</p>
+      <h3>Multiphase galactic winds, star by star</h3>
+      <p>With Stella, every star in a galaxy is followed individually, with its own stellar evolution, winds, radiation and supernova. At about one solar mass resolution I can watch the hot, warm and cold phases of a wind being launched, and measure how much mass, energy and metals each one carries. The image shows a WLM-mass dwarf galaxy whose interstellar medium has been carved into bubbles by individual supernovae.</p>
+      <p>I use these simulations, from dwarf galaxies to the LMC and tall-box patches of denser discs, to test how winds depend on the variety of supernova outcomes, on runaway stars and on turbulent metal mixing, and to build analytic wind models that observers can use.</p>
+      <ul class="refs">
+        <li><a href="https://doi.org/10.3847/1538-4357/adf283" target="_blank" rel="noopener">Pumping Iron: turbulent metal diffusion and multiphase outflows</a> <span>ApJ 2025</span></li>
+        <li><a href="https://doi.org/10.3847/1538-4357/ad98ea" target="_blank" rel="noopener">Some Stars Fade Quietly: varied supernova outcomes and the ISM</a> <span>ApJ 2025</span></li>
+        <li><a href="https://doi.org/10.3847/1538-4357/ad09e1" target="_blank" rel="noopener">Multiphase winds in an LMC-mass galaxy</a> <span>ApJ 2024</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="topic reverse">
+    <figure><img src="assets/img/coma-main.jpg" alt="Simulated Coma cluster: gas surface density with velocity streamlines and shocks, compared to Planck and eROSITA profiles" loading="lazy"></figure>
+    <div>
+      <h3>Galaxy clusters and the Coma cluster</h3>
+      <p>Starting from initial conditions constrained by the observed local Universe, I simulate fifty possible histories of the Coma cluster. Their X-ray and Sunyaev-Zel'dovich profiles match eROSITA and Planck, and the spread between them shows how much of what we see is cosmic variance. I also push cluster simulations to the scale where Coulomb collisions in the plasma become resolved.</p>
+      <ul class="refs">
+        <li><a href="https://arxiv.org/abs/2606.10028" target="_blank" rel="noopener">Learning the Universe: constrained simulations of the Coma cluster I</a> <span>2026</span></li>
+        <li><a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...967..125S/abstract" target="_blank" rel="noopener">Towards the magnetized ICM with resolved Coulomb collision scale</a> <span>ApJ 2024</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="topic">
+    <figure><img src="assets/img/turbulence-column.jpg" alt="Column density of supersonic turbulence at 2048 cubed resolution" loading="lazy"></figure>
+    <div>
+      <h3>Magnetic fields and turbulence</h3>
+      <p>Galaxies and clusters are magnetised, and turbulence is how they get there. My simulations showed the small-scale turbulent dynamo at work in Milky Way-like galaxies and in the intracluster medium, how it hands over to a large-scale galactic dynamo, and how strong central fields can help launch outflows.</p>
+      <ul class="refs">
+        <li><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...933..131S/abstract" target="_blank" rel="noopener">The small-scale turbulent dynamo in the ICM</a> <span>ApJ 2022</span></li>
+        <li><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...924...26S/abstract" target="_blank" rel="noopener">Driving galactic outflows with magnetic fields</a> <span>ApJ 2022</span></li>
+        <li><a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.494.4393S/abstract" target="_blank" rel="noopener">Magnetic winds and the galactic dynamo</a> <span>MNRAS 2020</span></li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="topic reverse" id="luna">
+    <figure class="natural"><img src="assets/img/luna-emergence.jpg" alt="Differentiable hydrodynamics: an optimised initial state evolves into the word LUNA" loading="lazy"></figure>
+    <div>
+      <p class="kicker">Flagship · Luna</p>
+      <h3>Differentiable hydrodynamics on GPUs</h3>
+      <p>Luna is my own fluid code written in JAX that is differentiable from end to end: hydrodynamics, self-gravity, collisionless particles and radiative cooling. Because every step has a gradient, you can ask the simulation questions backwards, for example which initial conditions produce a given final state. Above: the initial energy and velocity fields were optimised so that the flow spells out its own name.</p>
+      <p>Luna runs natively on GPUs and scales across many of them, supports adaptive mesh refinement, and is tested against established codes such as AthenaK and Arepo, from shock tubes to the cosmic web.</p>
+      <p class="muted">In development; first results presented at the Astronomische Gesellschaft meeting 2026.</p>
+    </div>
+  </article>
+
+  <div class="luna-strip">
+    <figure class="lw"><a href="assets/img/luna-kh8192.jpg" class="zoom"><img src="assets/img/luna-kh8192.jpg" alt="Kelvin-Helmholtz instability at 8192 squared cells, five snapshots in time" loading="lazy"></a><figcaption>Kelvin-Helmholtz instability at 8192² cells</figcaption></figure>
+    <figure><a href="assets/img/luna-cosmicweb.jpg" class="zoom"><img src="assets/img/luna-cosmicweb.jpg" alt="Gas in the cosmic web at redshift zero simulated with Luna" loading="lazy"></a><figcaption>The cosmic web at z = 0</figcaption></figure>
+    <figure><a href="assets/img/luna-turb1024.jpg" class="zoom"><img src="assets/img/luna-turb1024.jpg" alt="Driven turbulence at 1024 cubed cells" loading="lazy"></a><figcaption>Driven turbulence, 1024³ cells</figcaption></figure>
+    <figure><a href="assets/img/luna-m82.jpg" class="zoom"><img src="assets/img/luna-m82.jpg" alt="Edge-on gas density of an M82-like starburst wind simulated with Luna" loading="lazy"></a><figcaption>An M82-like starburst wind</figcaption></figure>
+    <figure><video src="assets/video/luna-collapse.mp4" poster="assets/img/luna-collapse-poster.jpg" muted loop playsinline autoplay preload="metadata"></video><figcaption>Collapse of a rotating cloud into a binary</figcaption></figure>
+    <figure class="lw"><video src="assets/video/luna-emergence.mp4" poster="assets/img/luna-emergence-poster.jpg" muted loop playsinline autoplay preload="metadata"></video><figcaption>Turbulence optimised by gradient descent until it writes its own name</figcaption></figure>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <h2>Gallery</h2>
+  <p class="section-lede">Stills and movies from my simulations. Click an image to enlarge it.</p>
+  <div class="gallery">
+    <figure class="half">
+      <video src="assets/video/lmc-wind.mp4" poster="assets/img/lmc-wind.jpg" controls muted loop playsinline preload="none"></video>
+      <figcaption>A star-by-star simulation of an LMC-mass galaxy seen edge-on, driving a multiphase wind.</figcaption>
+    </figure>
+    <figure class="half">
+      <video src="assets/video/dwarf-merger.mp4" poster="assets/img/dwarf-merger-poster.jpg" controls muted loop playsinline preload="none"></video>
+      <figcaption>A dwarf galaxy merger, with gas coloured by the age of the stars it forms.</figcaption>
+    </figure>
+    <figure>
+      <a href="assets/img/coma-poster.jpg" class="zoom"><img src="assets/img/coma-poster.jpg" alt="Overview poster of a simulated Coma cluster analogue" loading="lazy"></a>
+      <figcaption>One of fifty constrained Coma cluster simulations, compared with Planck and eROSITA.</figcaption>
+    </figure>
+    <figure>
+      <a href="assets/img/kh.jpg" class="zoom"><img src="assets/img/kh.jpg" alt="Kelvin-Helmholtz instability at high resolution" loading="lazy"></a>
+      <figcaption>Kelvin-Helmholtz instability at 8192² cells on GPUs.</figcaption>
+    </figure>
+    <figure>
+      <a href="assets/img/tallbox.jpg" class="zoom"><img src="assets/img/tallbox.jpg" alt="Time sequence of tall-box simulations of a supernova-driven disc patch" loading="lazy"></a>
+      <figcaption>Tall-box simulations: a patch of a galactic disc launching a wind over 400 Myr.</figcaption>
+    </figure>
+    <figure class="half">
+      <video src="assets/video/cosmo.mp4" poster="assets/img/cosmo-poster.jpg" controls muted loop playsinline preload="none"></video>
+      <figcaption>The cosmic web forming in gas (left) and dark matter (right).</figcaption>
+    </figure>
+    <figure class="half">
+      <div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/YFey9a4ZSmI" title="Cosmological evolution of a massive galaxy cluster" loading="lazy" allowfullscreen></iframe></div>
+      <figcaption>A 2×10<sup>15</sup> M<sub>⊙</sub> galaxy cluster with magnetic fields and anisotropic conduction, from z = 380 to today. About 3.5 million core hours.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="papers" class="section">
+  <h2>Selected first-author papers</h2>
+  <p class="section-lede">The full list is on <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Steinwandel%2C%20U%22&amp;sort=date%20desc" target="_blank" rel="noopener">NASA ADS</a>.</p>
+  <ol class="papers">
+    <li><span class="yr">2026</span><a href="https://doi.org/10.1093/mnras/stag1121" target="_blank" rel="noopener">Improving divergence cleaning in cosmological SPMHD simulations</a><span class="j">MNRAS 2026</span></li>
+    <li><span class="yr">2026</span><a href="https://arxiv.org/abs/2606.10028" target="_blank" rel="noopener">Learning the Universe: Constrained simulations of the Coma galaxy cluster. I. Radial X-ray and Compton-y signatures</a><span class="j">arXiv:2606.10028</span></li>
+    <li><span class="yr">2025</span><a href="https://doi.org/10.3847/1538-4357/adf283" target="_blank" rel="noopener">Pumping Iron: How turbulent metal diffusion impacts multiphase galactic outflows</a><span class="j">ApJ 991, 16</span></li>
+    <li><span class="yr">2025</span><a href="https://doi.org/10.3847/1538-4357/ad98ea" target="_blank" rel="noopener">Some stars fade quietly: Varied supernova explosion outcomes and their effects on the multiphase interstellar medium</a><span class="j">ApJ 979, 44</span></li>
+    <li><span class="yr">2024</span><a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...967..125S/abstract" target="_blank" rel="noopener">Towards cosmological simulations of the magnetized intracluster medium with resolved Coulomb collision scale</a><span class="j">ApJ 967, 125</span></li>
+    <li><span class="yr">2024</span><a href="https://doi.org/10.3847/1538-4357/ad09e1" target="_blank" rel="noopener">The structure and composition of multiphase galactic winds in a Large Magellanic Cloud mass simulated galaxy</a><span class="j">ApJ 960, 100</span></li>
+    <li><span class="yr">2023</span><a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.526.1408S/abstract" target="_blank" rel="noopener">On the impact of runaway stars on dwarf galaxies with resolved interstellar medium</a><span class="j">MNRAS 526, 1408</span></li>
+    <li><span class="yr">2022</span><a href="https://ui.adsabs.harvard.edu/abs/2022MNRAS.515.4797S/abstract" target="_blank" rel="noopener">On the optical properties of resonant drag instabilities: variability of AGB and R Coronae Borealis stars</a><span class="j">MNRAS 515, 4797</span></li>
+    <li><span class="yr">2022</span><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...933..131S/abstract" target="_blank" rel="noopener">On the small-scale turbulent dynamo in the intracluster medium: a comparison to dynamo theory</a><span class="j">ApJ 933, 131</span></li>
+    <li><span class="yr">2022</span><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...924...26S/abstract" target="_blank" rel="noopener">Driving galactic outflows with magnetic fields at low and high redshift</a><span class="j">ApJ 924, 26</span></li>
+    <li><span class="yr">2020</span><a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.495.1035S/abstract" target="_blank" rel="noopener">Hot phase generation by supernovae: resolution, chemistry and thermal conduction</a><span class="j">MNRAS 495, 1035</span></li>
+    <li><span class="yr">2020</span><a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.494.4393S/abstract" target="_blank" rel="noopener">On the origin of magnetic driven winds and the structure of the galactic dynamo in isolated galaxies</a><span class="j">MNRAS 494, 4393</span></li>
+    <li><span class="yr">2019</span><a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.483.1008S/abstract" target="_blank" rel="noopener">Magnetic buoyancy in simulated galactic discs with a realistic circumgalactic medium</a><span class="j">MNRAS 483, 1008</span></li>
+  </ol>
+</section>
+
+<section id="cv" class="section">
+  <h2>Short CV</h2>
+  <ol class="timeline">
+    <li><span class="when">2025 to now</span><div><strong>MPA Research Fellow</strong><br>Max Planck Institute for Astrophysics, Garching</div></li>
+    <li><span class="when">2021 to 2024</span><div><strong>Flatiron Research Fellow</strong><br>Center for Computational Astrophysics, Flatiron Institute, New York</div></li>
+    <li><span class="when">2020 to 2021</span><div><strong>Postdoc</strong><br>University Observatory Munich, LMU</div></li>
+    <li><span class="when">2017 to 2020</span><div><strong>PhD in theoretical and numerical astrophysics</strong>, summa cum laude<br>LMU Munich and MPA, thesis "On outflow mechanisms in galaxies"</div></li>
+    <li><span class="when">2018</span><div><strong>Kavli Summer Program in Astrophysics</strong><br>CCA, New York</div></li>
+    <li><span class="when">2011 to 2017</span><div><strong>BSc and MSc in Physics</strong>, MSc with distinction<br>University of Konstanz</div></li>
+  </ol>
+</section>
+
+<section id="contact" class="section contact">
+  <h2>Get in touch</h2>
+  <p>I'm always happy to talk about simulations, outflows, clusters or code, and about collaborations or student projects.</p>
+  <p class="email"><a id="mail" href="#contact">uli [at] mpa-garching.mpg.de</a></p>
+  <p class="muted">Max Planck Institute for Astrophysics · Karl-Schwarzschild-Str. 1 · 85748 Garching, Germany</p>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Ulrich P. Steinwandel · All images are from my own simulations.</p>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+
+<script>
+  // Assemble the address in the browser so it is not plain text for scrapers.
+  (function () {
+    var a = document.getElementById('mail');
+    var addr = ['uli', 'mpa-garching.mpg.de'].join('@');
+    a.textContent = addr;
+    a.href = 'mailto:' + addr;
+  })();
+
+  // Simple lightbox for gallery stills.
+  (function () {
+    var box = document.getElementById('lightbox');
+    var img = box.querySelector('img');
+    document.querySelectorAll('a.zoom').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        img.src = link.href;
+        img.alt = link.querySelector('img').alt;
+        box.hidden = false;
+      });
+    });
+    box.addEventListener('click', function () { box.hidden = true; });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') box.hidden = true; });
+  })();
+</script>
+</body>
+</html>
