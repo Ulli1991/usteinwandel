@@ -10,13 +10,13 @@
 <meta property="og:image" content="assets/img/wlm.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 <header class="nav" id="top">
-  <a class="brand" href="#top">U. P. Steinwandel</a>
+  <a class="brand" href="#top"><svg class="sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="10" cy="10" r="1.6" fill="currentColor"/></svg>U. P. Steinwandel</a>
   <nav>
     <a href="#about">About</a>
     <a href="#research">Research</a>
@@ -33,7 +33,7 @@
   </div>
   <div class="hero-inner">
    <div class="hero-text">
-    <p class="eyebrow">Computational astrophysics</p>
+    <p class="eyebrow">Computational astrophysics <span class="coords">· MPA Garching · 48.26° N 11.67° E</span></p>
     <h1>Ulrich P. Steinwandel</h1>
     <p class="lede">I build and run simulations that follow gas from single supernova explosions to entire galaxy clusters, to understand how stars, magnetic fields and turbulence shape the Universe we observe.</p>
     <p class="affil">MPA Research Fellow · Max Planck Institute for Astrophysics, Garching</p>
@@ -54,30 +54,57 @@
 
 <section id="about" class="section about">
   <div class="about-text">
+    <p class="sec">§ 01 <span>About</span></p>
     <h2>About me</h2>
     <p class="big">I'm Ulli, a theoretical and computational astrophysicist. I write simulation codes, run them on some of the largest supercomputers available, and use them to ask how galaxies regulate themselves.</p>
     <p>Most of my work is about <strong>feedback and the multiphase gas it creates</strong>: how individual supernovae drive hot, warm and cold winds out of galaxies, how those winds carry mass, energy and metals, and how the same physics plays out in the plasma of galaxy clusters. Magnetic fields run through all of it, and much of my early work showed how turbulent dynamos grow them in galaxies and clusters.</p>
     <p>I'm also a code developer, and my two flagship projects are codes. <strong>Stella</strong> is my star-by-star stellar feedback model in GIZMO: it samples individual stars, gives each one its own stellar evolution, and resolves every supernova at about one solar mass resolution. <strong>Luna</strong> is my own GPU-native, end-to-end differentiable hydrodynamics code, so that simulations can be fitted, inverted and optimised like any other model.</p>
     <p>Before moving to the <a href="https://www.mpa-garching.mpg.de" target="_blank" rel="noopener">MPA</a> in 2025, I was a Flatiron Research Fellow at the <a href="https://www.simonsfoundation.org/flatiron/center-for-computational-astrophysics/" target="_blank" rel="noopener">Center for Computational Astrophysics</a> in New York. I did my PhD at LMU Munich and studied physics in Konstanz.</p>
-    <figure class="offduty"><img src="assets/img/lubibi.jpg" alt="Ulli with Luna the dog on a coastal path above the sea" loading="lazy"><figcaption>Off duty, with Luna the dog, who inspired the name of my code Luna.</figcaption></figure>
   </div>
-  <aside class="facts">
+  <aside class="about-side">
+    <figure class="offduty"><img src="assets/img/lubibi.jpg" alt="Ulli with Luna the dog on a coastal path above the sea" loading="lazy"><figcaption>Off duty, with Luna the dog, who inspired the name of my code Luna.</figcaption></figure>
+  </aside>
+  <div class="facts">
     <div class="fact"><span class="num">60+</span><span class="label">papers, 13 as first author</span></div>
     <div class="fact"><span class="num">1000+</span><span class="label">citations</span></div>
     <div class="fact"><span class="num">~4&nbsp;M<sub>⊙</sub></span><span class="label">resolution of my dwarf galaxy simulations, star by star</span></div>
     <div class="fact"><span class="num">9</span><span class="label">PhD students co-mentored</span></div>
     <div class="fact"><span class="num">2027</span><span class="label">chair of the <a href="https://multiphaseoutflows.pages.mpcdf.de/" target="_blank" rel="noopener">Multiphase Outflows</a> workshop at Schloss Aspenstein</span></div>
-  </aside>
+  </div>
 </section>
 
 <section id="research" class="section">
+  <p class="sec">§ 02 <span>Research</span></p>
   <h2>Research</h2>
   <p class="section-lede">Four threads, one theme: resolving the small-scale physics that decides what happens on large scales.</p>
+  <figure class="scales" aria-label="Figure 1: the range of length scales covered by each research area">
+    <figcaption class="fig-title"><span class="fig-no">Fig. 1</span> The scales I simulate</figcaption>
+    <div class="sc-plot">
+      <div class="sc-axis">
+        <span style="left:0%">0.01 pc</span><span style="left:20%">1 pc</span><span style="left:40%">100 pc</span><span style="left:60%">10 kpc</span><span style="left:80%">1 Mpc</span><span style="left:100%">100 Mpc</span>
+      </div>
+      <div class="sc-marks">
+        <i style="left:24.8%"><b>Supernova remnant</b></i>
+        <i style="left:54.8%" class="lo"><b>Dwarf galaxy</b></i>
+        <i style="left:64.8%"><b>Milky Way</b></i>
+        <i style="left:84.8%" class="lo r"><b>Coma cluster</b></i>
+        <i style="left:94.8%"><b>Cosmic web</b></i>
+      </div>
+      <ul class="sc-rows">
+        <li><span class="sc-lab"><a href="#stella">Stella: winds, star by star</a></span><span class="sc-track"><span class="sc-bar c1" style="left:10%;width:54.8%"></span></span></li>
+        <li><span class="sc-lab"><a href="#magnetism">Magnetic fields</a></span><span class="sc-track"><span class="sc-bar c3" style="left:30%;width:50%"></span></span></li>
+        <li><span class="sc-lab"><a href="#clusters">Clusters and Coma</a></span><span class="sc-track"><span class="sc-bar c2" style="left:40%;width:60%"></span></span></li>
+        <li><span class="sc-lab"><a href="#luna">Luna</a></span><span class="sc-track"><span class="sc-bar c4" style="left:0%;width:96%"></span></span></li>
+      </ul>
+    </div>
+    <p class="fig-cap">Each bar runs from the smallest length my simulations resolve in that area to the size of the simulated volume. Approximate, on a logarithmic axis.</p>
+  </figure>
+
 
   <article class="topic" id="stella">
     <figure><img src="assets/img/wlm.jpg" alt="Gas surface density of a simulated WLM-mass dwarf galaxy at one solar mass resolution, full of supernova-blown bubbles" loading="lazy"></figure>
     <div>
-      <p class="kicker">Flagship · Stella</p>
+      <p class="kicker"><span class="n">01 / 04</span> Flagship · Stella</p>
       <h3>Multiphase galactic winds, star by star</h3>
       <p>With Stella, every star in a galaxy is followed individually, with its own stellar evolution, winds, radiation and supernova. At about one solar mass resolution I can watch the hot, warm and cold phases of a wind being launched, and measure how much mass, energy and metals each one carries. The image shows a WLM-mass dwarf galaxy whose interstellar medium has been carved into bubbles by individual supernovae.</p>
       <p>I use these simulations, from dwarf galaxies to the LMC and tall-box patches of denser discs, to test how winds depend on the variety of supernova outcomes, on runaway stars and on turbulent metal mixing, and to build analytic wind models that observers can use.</p>
@@ -89,9 +116,10 @@
     </div>
   </article>
 
-  <article class="topic reverse">
+  <article class="topic reverse" id="clusters">
     <figure><img src="assets/img/coma-card.jpg" alt="Render of a constrained Coma cluster simulation: the cluster at the centre of the cosmic web" loading="lazy"></figure>
     <div>
+      <p class="kicker"><span class="n">02 / 04</span> Clusters</p>
       <h3>Galaxy clusters and the Coma cluster</h3>
       <p>Starting from initial conditions constrained by the observed local Universe, I simulate fifty possible histories of the Coma cluster. Their X-ray and Sunyaev-Zel'dovich profiles match eROSITA and Planck, and the spread between them shows how much of what we see is cosmic variance. I also push cluster simulations to the scale where Coulomb collisions in the plasma become resolved.</p>
       <ul class="refs">
@@ -101,9 +129,10 @@
     </div>
   </article>
 
-  <article class="topic">
+  <article class="topic" id="magnetism">
     <figure><img src="assets/img/wlm-bfield.jpg" alt="Magnetic field strength in a simulated WLM-mass dwarf galaxy" loading="lazy"></figure>
     <div>
+      <p class="kicker"><span class="n">03 / 04</span> Magnetism</p>
       <h3>Magnetic fields and turbulence</h3>
       <p>Galaxies and clusters are magnetised, and turbulence is how they get there. My simulations showed the small-scale turbulent dynamo at work in Milky Way-like galaxies and in the intracluster medium, how it hands over to a large-scale galactic dynamo, and how strong central fields can help launch outflows.</p>
       <ul class="refs">
@@ -117,7 +146,7 @@
   <article class="topic reverse" id="luna">
     <figure><video src="assets/video/luna-emergence-sq.mp4" poster="assets/img/luna-emergence-sq.jpg" autoplay muted loop playsinline aria-label="Turbulence optimised by gradient descent until it spells LUNA"></video></figure>
     <div>
-      <p class="kicker">Flagship · Luna</p>
+      <p class="kicker"><span class="n">04 / 04</span> Flagship · Luna</p>
       <h3>Differentiable hydrodynamics on GPUs</h3>
       <p>Luna is my own fluid code written in JAX that is differentiable from end to end: hydrodynamics, self-gravity, collisionless particles and radiative cooling. Because every step has a gradient, you can ask the simulation questions backwards, for example which initial conditions produce a given final state. In the movie, the initial velocity field was optimised so that the turbulent flow spells out its own name.</p>
       <p>Luna runs natively on GPUs and scales across many of them, supports adaptive mesh refinement, and is tested against established codes such as AthenaK and Arepo, from shock tubes to the cosmic web.</p>
@@ -136,6 +165,7 @@
 </section>
 
 <section id="gallery" class="section">
+  <p class="sec">§ 03 <span>Gallery</span></p>
   <h2>Gallery</h2>
   <p class="section-lede">Stills and movies from my simulations. Click an image to enlarge it.</p>
   <div class="gallery">
@@ -191,6 +221,7 @@
 </section>
 
 <section id="papers" class="section">
+  <p class="sec">§ 04 <span>Papers</span></p>
   <h2>Selected first-author papers</h2>
   <p class="section-lede">The full list is on <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Steinwandel%2C%20U%22&amp;sort=date%20desc" target="_blank" rel="noopener">NASA ADS</a>.</p>
   <ol class="papers">
@@ -211,6 +242,7 @@
 </section>
 
 <section id="cv" class="section">
+  <p class="sec">§ 05 <span>CV</span></p>
   <h2>Short CV</h2>
   <ol class="timeline">
     <li><span class="when">2025 to now</span><div><strong>MPA Research Fellow</strong><br>Max Planck Institute for Astrophysics, Garching</div></li>
@@ -223,6 +255,7 @@
 </section>
 
 <section id="contact" class="section contact">
+  <p class="sec">§ 06 <span>Contact</span></p>
   <h2>Get in touch</h2>
   <p>I'm always happy to talk about simulations, outflows, clusters or code, and about collaborations or student projects.</p>
   <p class="email"><a id="mail" href="#contact">uli [at] mpa-garching.mpg.de</a></p>
