@@ -200,14 +200,36 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 70px
 }
 @media (max-width: 640px) {
   body { font-size: 16px; }
-  .nav { padding: 12px 16px; }
-  .nav nav { display: none; }
+  .nav { padding: 10px 0 0; flex-direction: column; align-items: stretch; gap: 6px; }
+  .brand { padding: 0 16px; font-size: 17px; }
+  .nav nav { gap: 18px; overflow-x: auto; padding: 4px 16px 10px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .nav nav::-webkit-scrollbar { display: none; }
+  .nav nav a { white-space: nowrap; font-size: 14px; }
+  .scroll { display: none; }
+  .hero h1 { font-size: 40px; }
+  .lede { font-size: 17px; margin-top: 18px; }
+  .flagships { margin-top: -10px; }
+  .btn { padding: 9px 14px; font-size: 13.5px; }
+  .about .big { font-size: 20px; }
+  .facts { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .fact { padding: 14px 16px; }
+  .fact .num { font-size: 24px; }
+  .fact .label { font-size: 13px; line-height: 1.4; display: block; }
+  .fact:last-child { grid-column: span 2; }
+  .section h2 { font-size: 30px; }
+  .section-lede { font-size: 16px; margin-bottom: 30px; }
+  .topic { padding: 28px 0; }
+  .topic h3 { font-size: 23px; }
+  .luna-strip img, .luna-strip video { height: 150px; }
+  .contact .email { font-size: 21px; word-break: break-all; }
   .hero { padding: 100px 16px 70px; }
   .hero-bg::after {
   z-index: 1; background: linear-gradient(0deg, var(--bg) 0%, rgba(7, 8, 13, 0.72) 40%, rgba(7, 8, 13, 0.6) 100%); }
   .section { padding: 80px 16px 0; }
-  .facts { grid-template-columns: 1fr; }
-  .gallery figure, .gallery .half, .gallery .wide { grid-column: span 6; }
+  .gallery { gap: 12px; }
+  .gallery figure { grid-column: span 3; }
+  .gallery .half, .gallery .wide { grid-column: span 6; }
+  .gallery figure:not(.half):not(.wide) figcaption { font-size: 12.5px; padding: 8px 10px 10px; }
   .papers li { grid-template-columns: 1fr; gap: 2px; }
   .timeline::before, .timeline li::before { display: none; }
   .timeline li { grid-template-columns: 1fr; gap: 2px; }
