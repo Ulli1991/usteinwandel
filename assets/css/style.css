@@ -124,7 +124,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.01e
 }
 .topic.reverse figure { order: 2; }
 .topic figure { margin: 0; border-radius: 18px; overflow: hidden; background: #000; box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.9); }
-.topic figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 0.8s ease; }
+.topic figure img, .topic figure video { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center; transition: transform 0.8s ease; }
 .topic:hover figure img { transform: scale(1.03); }
 .topic figure.natural { background: transparent; }
 .topic figure.natural img { aspect-ratio: auto; object-fit: contain; }
@@ -136,10 +136,10 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.01e
 .refs li span { color: var(--muted); white-space: nowrap; font-size: 13px; }
 
 /* Luna strip */
-.luna-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 8px 0 0; }
+.luna-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 8px 0 0; }
 .luna-strip figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
 .luna-strip .lw { grid-column: span 2; }
-.luna-strip img, .luna-strip video { width: 100%; height: 190px; object-fit: cover; background: #000; }
+.luna-strip img, .luna-strip video { width: 100%; aspect-ratio: 1 / 1; height: auto; object-fit: cover; object-position: center; background: #000; }
 .luna-strip figcaption { padding: 8px 12px 10px; font-size: 13px; color: var(--muted); }
 
 /* Gallery */
@@ -147,7 +147,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.01e
 .gallery figure { grid-column: span 2; margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
 .gallery .wide { grid-column: span 6; }
 .gallery .half { grid-column: span 3; }
-.gallery img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: top; background: #000; }
+.gallery img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center; background: #000; }
+.gallery .contain img { object-fit: contain; background: #fff; padding: 10px; }
 .gallery video { width: 100%; aspect-ratio: 16 / 9; background: #000; }
 .gallery figcaption { padding: 12px 16px 14px; font-size: 14px; color: var(--muted); }
 .yt { position: relative; aspect-ratio: 16 / 9; background: #000; }
@@ -220,7 +221,6 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 70px
   .section-lede { font-size: 16px; margin-bottom: 30px; }
   .topic { padding: 28px 0; }
   .topic h3 { font-size: 23px; }
-  .luna-strip img, .luna-strip video { height: 150px; }
   .contact .email { font-size: 21px; word-break: break-all; }
   .hero { padding: 100px 16px 70px; }
   .hero-bg::after {

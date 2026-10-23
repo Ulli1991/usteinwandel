@@ -115,23 +115,23 @@
   </article>
 
   <article class="topic reverse" id="luna">
-    <figure class="natural"><img src="assets/img/luna-emergence.jpg" alt="Differentiable hydrodynamics: an optimised initial state evolves into the word LUNA" loading="lazy"></figure>
+    <figure><video src="assets/video/luna-emergence-sq.mp4" poster="assets/img/luna-emergence-sq.jpg" autoplay muted loop playsinline aria-label="Turbulence optimised by gradient descent until it spells LUNA"></video></figure>
     <div>
       <p class="kicker">Flagship · Luna</p>
       <h3>Differentiable hydrodynamics on GPUs</h3>
-      <p>Luna is my own fluid code written in JAX that is differentiable from end to end: hydrodynamics, self-gravity, collisionless particles and radiative cooling. Because every step has a gradient, you can ask the simulation questions backwards, for example which initial conditions produce a given final state. Above: the initial energy and velocity fields were optimised so that the flow spells out its own name.</p>
+      <p>Luna is my own fluid code written in JAX that is differentiable from end to end: hydrodynamics, self-gravity, collisionless particles and radiative cooling. Because every step has a gradient, you can ask the simulation questions backwards, for example which initial conditions produce a given final state. In the movie, the initial velocity field was optimised so that the turbulent flow spells out its own name.</p>
       <p>Luna runs natively on GPUs and scales across many of them, supports adaptive mesh refinement, and is tested against established codes such as AthenaK and Arepo, from shock tubes to the cosmic web.</p>
       <p class="muted">In development; first results presented at the Astronomische Gesellschaft meeting 2026. The code is named after Luna, my dog (see <a href="#about">About me</a>).</p>
     </div>
   </article>
 
   <div class="luna-strip">
-    <figure class="lw"><a href="assets/img/luna-kh8192.jpg" class="zoom"><img src="assets/img/luna-kh8192.jpg" alt="Kelvin-Helmholtz instability at 8192 squared cells, five snapshots in time" loading="lazy"></a><figcaption>Kelvin-Helmholtz instability at 8192² cells</figcaption></figure>
     <figure><a href="assets/img/luna-cosmicweb.jpg" class="zoom"><img src="assets/img/luna-cosmicweb.jpg" alt="Gas in the cosmic web at redshift zero simulated with Luna" loading="lazy"></a><figcaption>The cosmic web at z = 0</figcaption></figure>
+    <figure><a href="assets/img/luna-kh-spiral.jpg" class="zoom"><img src="assets/img/luna-kh-spiral.jpg" alt="Kelvin-Helmholtz spirals at 8192 squared cells" loading="lazy"></a><figcaption>Kelvin-Helmholtz rolls at 8192² cells</figcaption></figure>
     <figure><a href="assets/img/luna-turb1024.jpg" class="zoom"><img src="assets/img/luna-turb1024.jpg" alt="Driven turbulence at 1024 cubed cells" loading="lazy"></a><figcaption>Driven turbulence, 1024³ cells</figcaption></figure>
+    <figure><a href="assets/img/luna-sedov.jpg" class="zoom"><img src="assets/img/luna-sedov.jpg" alt="Column density of a 3D Sedov-Taylor supernova blast wave" loading="lazy"></a><figcaption>A supernova blast wave in 3D</figcaption></figure>
     <figure><a href="assets/img/luna-m82.jpg" class="zoom"><img src="assets/img/luna-m82.jpg" alt="Edge-on gas density of an M82-like starburst wind simulated with Luna" loading="lazy"></a><figcaption>An M82-like starburst wind</figcaption></figure>
-    <figure><video src="assets/video/luna-collapse.mp4" poster="assets/img/luna-collapse-poster.jpg" muted loop playsinline autoplay preload="metadata"></video><figcaption>Collapse of a rotating cloud into a binary</figcaption></figure>
-    <figure class="lw"><video src="assets/video/luna-emergence.mp4" poster="assets/img/luna-emergence-poster.jpg" muted loop playsinline autoplay preload="metadata"></video><figcaption>Turbulence optimised by gradient descent until it writes its own name</figcaption></figure>
+    <figure><video src="assets/video/luna-collapse.mp4" poster="assets/img/luna-collapse-poster.jpg" muted loop playsinline autoplay preload="metadata"></video><figcaption>A rotating cloud collapsing into a binary</figcaption></figure>
   </div>
 </section>
 
@@ -156,7 +156,7 @@
       <figcaption>A dwarf galaxy merger, with gas coloured by the age of the stars it forms.</figcaption>
     </figure>
     <figure>
-      <a href="assets/img/coma-poster.jpg" class="zoom"><img src="assets/img/coma-poster.jpg" alt="Overview poster of a simulated Coma cluster analogue" loading="lazy"></a>
+      <a href="assets/img/coma-poster.jpg" class="zoom"><img src="assets/img/coma-main.jpg" alt="A simulated Coma cluster analogue with velocity streamlines and shocks" loading="lazy"></a>
       <figcaption>One of fifty constrained Coma cluster simulations, compared with Planck and eROSITA.</figcaption>
     </figure>
     <figure>
@@ -164,7 +164,7 @@
       <figcaption>Kelvin-Helmholtz instability at 8192² cells on GPUs.</figcaption>
     </figure>
     <figure>
-      <a href="assets/img/tallbox.jpg" class="zoom"><img src="assets/img/tallbox.jpg" alt="Time sequence of tall-box simulations of a supernova-driven disc patch" loading="lazy"></a>
+      <a href="assets/img/tallbox.jpg" class="zoom contain"><img src="assets/img/tallbox.jpg" alt="Time sequence of tall-box simulations of a supernova-driven disc patch" loading="lazy"></a>
       <figcaption>Tall-box simulations: a patch of a galactic disc launching a wind over 400 Myr.</figcaption>
     </figure>
     <figure>
