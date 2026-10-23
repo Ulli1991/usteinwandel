@@ -59,7 +59,7 @@
     <p>Most of my work is about <strong>feedback and the multiphase gas it creates</strong>: how individual supernovae drive hot, warm and cold winds out of galaxies, how those winds carry mass, energy and metals, and how the same physics plays out in the plasma of galaxy clusters. Magnetic fields run through all of it, and much of my early work showed how turbulent dynamos grow them in galaxies and clusters.</p>
     <p>I'm also a code developer, and my two flagship projects are codes. <strong>Stella</strong> is my star-by-star stellar feedback model in GIZMO: it samples individual stars, gives each one its own stellar evolution, and resolves every supernova at about one solar mass resolution. <strong>Luna</strong> is my own GPU-native, end-to-end differentiable hydrodynamics code, so that simulations can be fitted, inverted and optimised like any other model.</p>
     <p>Before moving to the <a href="https://www.mpa-garching.mpg.de" target="_blank" rel="noopener">MPA</a> in 2025, I was a Flatiron Research Fellow at the <a href="https://www.simonsfoundation.org/flatiron/center-for-computational-astrophysics/" target="_blank" rel="noopener">Center for Computational Astrophysics</a> in New York. I did my PhD at LMU Munich and studied physics in Konstanz.</p>
-    <figure class="offduty"><img src="assets/img/lubibi.jpg" alt="Ulli with Luna the dog on a coastal path above the sea" loading="lazy"><figcaption>Off duty, with Luna the dog.</figcaption></figure>
+    <figure class="offduty"><img src="assets/img/lubibi.jpg" alt="Ulli with Luna the dog on a coastal path above the sea" loading="lazy"><figcaption>Off duty, with Luna the dog, who inspired the name of my code Luna.</figcaption></figure>
   </div>
   <aside class="facts">
     <div class="fact"><span class="num">60+</span><span class="label">papers, 13 as first author</span></div>
@@ -121,7 +121,7 @@
       <h3>Differentiable hydrodynamics on GPUs</h3>
       <p>Luna is my own fluid code written in JAX that is differentiable from end to end: hydrodynamics, self-gravity, collisionless particles and radiative cooling. Because every step has a gradient, you can ask the simulation questions backwards, for example which initial conditions produce a given final state. Above: the initial energy and velocity fields were optimised so that the flow spells out its own name.</p>
       <p>Luna runs natively on GPUs and scales across many of them, supports adaptive mesh refinement, and is tested against established codes such as AthenaK and Arepo, from shock tubes to the cosmic web.</p>
-      <p class="muted">In development; first results presented at the Astronomische Gesellschaft meeting 2026.</p>
+      <p class="muted">In development; first results presented at the Astronomische Gesellschaft meeting 2026. The code is named after Luna, my dog (see <a href="#about">About me</a>).</p>
     </div>
   </article>
 
