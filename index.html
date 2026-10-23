@@ -33,7 +33,7 @@
   </div>
   <div class="hero-inner">
    <div class="hero-text">
-    <p class="eyebrow">Computational astrophysics <span class="coords">· MPA Garching · 48.26° N 11.67° E</span></p>
+    <p class="eyebrow">Computational astrophysics</p>
     <h1>Ulrich P. Steinwandel</h1>
     <p class="lede">I build and run simulations that follow gas from single supernova explosions to entire galaxy clusters, to understand how stars, magnetic fields and turbulence shape the Universe we observe.</p>
     <p class="affil">MPA Research Fellow · Max Planck Institute for Astrophysics, Garching</p>
@@ -77,8 +77,8 @@
   <p class="sec">§ 02 <span>Research</span></p>
   <h2>Research</h2>
   <p class="section-lede">Four threads, one theme: resolving the small-scale physics that decides what happens on large scales.</p>
-  <figure class="scales" aria-label="Figure 1: the range of length scales covered by each research area">
-    <figcaption class="fig-title"><span class="fig-no">Fig. 1</span> The scales I simulate</figcaption>
+  <figure class="scales" aria-label="Figure 1: the range of length scales covered by each physical process">
+    <figcaption class="fig-title"><span class="fig-no">Fig. 1</span> The physical processes I simulate, and on which scales</figcaption>
     <div class="sc-plot">
       <div class="sc-axis">
         <span style="left:0%">0.01 pc</span><span style="left:20%">1 pc</span><span style="left:40%">100 pc</span><span style="left:60%">10 kpc</span><span style="left:80%">1 Mpc</span><span style="left:100%">100 Mpc</span>
@@ -91,15 +91,50 @@
         <i style="left:94.8%"><b>Cosmic web</b></i>
       </div>
       <ul class="sc-rows">
-        <li><span class="sc-lab"><a href="#stella">Stella: winds, star by star</a></span><span class="sc-track"><span class="sc-bar c1" style="left:10%;width:54.8%"></span></span></li>
-        <li><span class="sc-lab"><a href="#magnetism">Magnetic fields</a></span><span class="sc-track"><span class="sc-bar c3" style="left:30%;width:50%"></span></span></li>
-        <li><span class="sc-lab"><a href="#clusters">Clusters and Coma</a></span><span class="sc-track"><span class="sc-bar c2" style="left:40%;width:60%"></span></span></li>
-        <li><span class="sc-lab"><a href="#luna">Luna</a></span><span class="sc-track"><span class="sc-bar c4" style="left:0%;width:96%"></span></span></li>
+        <li><span class="sc-lab">Star formation in clouds</span><span class="sc-track"><span class="sc-bar c6" style="left:0%;width:33%"></span></span></li>
+        <li><span class="sc-lab"><a href="#stella">Turbulent multiphase ISM</a></span><span class="sc-track"><span class="sc-bar c1" style="left:10%;width:44.8%"></span></span></li>
+        <li><span class="sc-lab"><a href="#stella">Galactic winds</a></span><span class="sc-track"><span class="sc-bar c5" style="left:20%;width:50%"></span></span></li>
+        <li><span class="sc-lab"><a href="#magnetism">Magnetic field growth</a></span><span class="sc-track"><span class="sc-bar c3" style="left:30%;width:50%"></span></span></li>
+        <li><span class="sc-lab"><a href="#clusters">Plasma physics of the ICM</a></span><span class="sc-track"><span class="sc-bar c4" style="left:50%;width:34.8%"></span></span></li>
+        <li><span class="sc-lab"><a href="#clusters">Cosmic web and clusters</a></span><span class="sc-track"><span class="sc-bar c2" style="left:60%;width:40%"></span></span></li>
       </ul>
     </div>
-    <p class="fig-cap">Each bar runs from the smallest length my simulations resolve in that area to the size of the simulated volume. Approximate, on a logarithmic axis.</p>
+    <p class="fig-cap">Each bar spans the length scales on which I study that process, from the smallest resolved scale to the size of the system. Approximate, on a logarithmic axis.</p>
   </figure>
 
+
+  <figure class="caps" aria-label="Figure 2: the physics in Stella and Luna">
+    <figcaption class="fig-title"><span class="fig-no">Fig. 2</span> What Stella and Luna can do</figcaption>
+    <table>
+      <thead><tr><th scope="col">Physics</th><th scope="col"><a href="#stella">Stella</a><small>star-by-star feedback, in GIZMO</small></th><th scope="col"><a href="#luna">Luna</a><small>differentiable GPU code</small></th></tr></thead>
+      <tbody>
+        <tr class="grp"><th colspan="3">Fluids and fields</th></tr>
+        <tr><th>Hydrodynamics</th><td class="y">●<span>meshless finite mass</span></td><td class="y">●<span>MUSCL-Hancock, HLLC</span></td></tr>
+        <tr><th>Magnetic fields</th><td class="y">●<span>meshless MHD</span></td><td class="n">·</td></tr>
+        <tr><th>Cosmic rays</th><td class="y">●<span>transport</span></td><td class="n">·</td></tr>
+        <tr><th>Turbulent metal mixing</th><td class="y">●</td><td class="n">·</td></tr>
+        <tr class="grp"><th colspan="3">Gravity and cosmology</th></tr>
+        <tr><th>Self-gravity</th><td class="y">●</td><td class="y">●</td></tr>
+        <tr><th>Dark matter, cosmic expansion</th><td class="d">○<span>zoom-ins planned</span></td><td class="y">●</td></tr>
+        <tr><th>Stellar dynamics, black holes</th><td class="y">●<span>KETJU</span></td><td class="v">◐<span>via Torch</span></td></tr>
+        <tr class="grp"><th colspan="3">Gas physics</th></tr>
+        <tr><th>Non-equilibrium chemistry, cooling</th><td class="y">●<span>H₂, CO networks</span></td><td class="y">●<span>same networks, in JAX</span></td></tr>
+        <tr><th>Radiation transport</th><td class="y">●<span>Strömgren or M1</span></td><td class="y">●<span>M1, ionisation</span></td></tr>
+        <tr><th>FUV, photoelectric heating</th><td class="y">●</td><td class="n">·</td></tr>
+        <tr><th>Dust, radiation pressure on dust</th><td class="y">●</td><td class="n">·</td></tr>
+        <tr class="grp"><th colspan="3">Stars and feedback</th></tr>
+        <tr><th>Individual stars from the full IMF</th><td class="y">●</td><td class="v">◐<span>sinks, via Torch</span></td></tr>
+        <tr><th>Resolved supernovae</th><td class="y">●<span>Sedov-Taylor phase</span></td><td class="v">◐<span>via Torch</span></td></tr>
+        <tr><th>Stellar winds, incl. AGB</th><td class="y">●</td><td class="v">◐<span>via Torch</span></td></tr>
+        <tr class="grp"><th colspan="3">Numerics</th></tr>
+        <tr><th>Adaptive mesh refinement</th><td class="n">·<span>Lagrangian instead</span></td><td class="y">●<span>block AMR</span></td></tr>
+        <tr><th>Runs on many GPUs</th><td class="n">·</td><td class="y">●<span>NVIDIA and AMD</span></td></tr>
+        <tr><th>Differentiable end to end</th><td class="n">·</td><td class="y">●</td></tr>
+        <tr><th>Nuclear burning, stellar explosions</th><td class="n">·</td><td class="d">○<span>in development</span></td></tr>
+      </tbody>
+    </table>
+    <p class="fig-cap"><span class="key">●</span> built in &nbsp; <span class="key">◐</span> through coupling to the Torch star-formation framework &nbsp; <span class="key">○</span> in development</p>
+  </figure>
 
   <article class="topic" id="stella">
     <figure><img src="assets/img/wlm.jpg" alt="Gas surface density of a simulated WLM-mass dwarf galaxy at one solar mass resolution, full of supernova-blown bubbles" loading="lazy"></figure>
